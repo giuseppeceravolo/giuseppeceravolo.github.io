@@ -20,8 +20,8 @@ title                    : "Giuseppe Ceravolo"
 title_separator          : "~"
 name                     : "Giuseppe Ceravolo"
 description              : "Data Science Portfolio - A collection of projects leading to a Data Scientist."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+url                      : # stai attento che in locale succedono danni! # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : # stai attento che in locale succedono danni! # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -124,12 +124,12 @@ author:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/giuseppeceravolo/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/giuseppe-ceravolo-data-scientist/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/giuseppeceravolo/"
 
 # Site Footer
 footer:
@@ -140,6 +140,9 @@ footer:
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.linkedin.com/in/giuseppe-ceravolo-data-scientist/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/giuseppeceravolo"
@@ -149,9 +152,6 @@ footer:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.linkedin.com/in/giuseppe-ceravolo-data-scientist/"
 
 
 # Reading Files
