@@ -7,7 +7,7 @@ header:
   excerpt: "What a wonderful moment it was when I decided to start this journey! Let me tell you about my passion for Data Science and why I started this website"
 ---
 
-# *Giuseppe Ceravolo thinking about himself in the future...*
+# Giuseppe Ceravolo thinking about himself in the future...
 
 I am writing down this post at 9:32pm of July 6, 2019, and I am wondering what I will be like in 3, 5, 10 years from today.
 
