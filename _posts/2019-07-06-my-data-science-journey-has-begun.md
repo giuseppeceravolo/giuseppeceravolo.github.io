@@ -7,8 +7,6 @@ header:
   excerpt: "What a wonderful moment it was when I decided to start this journey! Let me tell you about my passion for Data Science and why I started this website"
 ---
 
-# Giuseppe Ceravolo thinking about himself in the future...
-
 I am writing down this post at 9:32pm of July 6, 2019, and I am wondering what I will be like in 3, 5, 10 years from today.
 
 I do not know yet.
@@ -39,7 +37,7 @@ Long story short, a Data Scientist:
 + has a good understanding of maths, algorithms, and statistics
 + gains insights from data based on business expertise
 
-The following Venn diagram by Drew Conway makes the point of what Data Science stands for.
+The following [Venn diagram of Data Science by Drew Conway](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram) makes the point of what Data Science stands for.
 <img src="https://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png" alt="Data Science Venn Diagram by Drew Conway">
 
 Also, the Data Scientist is capable of making predictions and drawing inferences for future outcomes by asking the right questions, collecting and cleaning the data, and effectively visualize and communicate insights.
