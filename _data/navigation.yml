@@ -4,8 +4,8 @@ main:
     url: /about/
     description: "Nice to meet you!"
   - title: "Posts by Tags"
-    url: /machine-learning/
-    description: "Have a look at my ML projects"
+    url: /tags/
+    description: "Have a look at my posts by tag"
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
