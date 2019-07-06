@@ -2,10 +2,10 @@
 main:
   - title: "About"
     url: /about/
-    description: "Nice to meet you!"
+    # description: "Nice to meet you!"
   - title: "Machine Learning"
     url: /machine-learning/
-    description: "Have a look at my ML projects"
+    # description: "Have a look at my ML projects"
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

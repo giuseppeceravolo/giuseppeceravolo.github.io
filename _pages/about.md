@@ -12,4 +12,4 @@ I built this website in part as a blog for my reference and in part as a means t
 
 I hope you enjoy reading my portfolio and find it useful.
 
-~ Giuseppe
+~Giuseppe
