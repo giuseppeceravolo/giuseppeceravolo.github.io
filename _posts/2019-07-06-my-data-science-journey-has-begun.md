@@ -14,13 +14,13 @@ I do not know yet.
 
 The only thing that I know for sure is that I am going to be proud for what I have accomplished.
 
-The portfolio - or perhaps blog - of mine will motivate me to study consistently the Data Science world.
+This portfolio - or perhaps blog - of mine will motivate me to study consistently the Data Science world.
 
 As I am an eager learner and I have a proclivity for Data Visualization and Data Modeling, I just can't wait how this will end up.
 
 ## *Why starting a blog?*
 
-There are 2 main reaonns that led me to start this journey to Data Science literacy, namely:
+There are 3 main reasons that led me to start this journey to Data Science literacy, namely:
 
 1. keep learning
 2. collect my projects for reference
