@@ -39,7 +39,7 @@ You must be aware that
 
 > Models are a dime a dozen.
 
-What I mean is that any Data Scientist can produce thousands of models in a matter of days.
+What I mean is that any Data Scientist can produce thousands of fancy models in a matter of days.
 
 They key and most-rewarding component of a Data Scientist job is
 
