@@ -43,10 +43,10 @@ You must be aware that
 
 What I mean is that any Data Scientist can produce thousands of fancy models in a matter of days.
 
-They key and most-rewarding component of a Data Scientist job is
+The key and most-rewarding component of a Data Scientist job is
 
 >To know how to engineer features and implement the (only one) model into your company's pipeline to deliver value
 
-I hope it all makes sense to you. Please feel free to contact me - I'd love to have a talk with you!
+I hope it all makes sense to you. Please feel free to reach out to me - I'd love to have a talk with you!
 
 ~Giuseppe
