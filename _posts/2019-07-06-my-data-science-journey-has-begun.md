@@ -20,7 +20,7 @@ As I am an eager learner and I have a proclivity for Data Visualization and Data
 
 ## *Why starting a blog?*
 
-There are 3 main reasons that led me to start this journey to Data Science literacy, namely:
+There are three main reasons that led me to start this journey to Data Science literacy, namely:
 
 1. keep learning
 2. collect my projects for reference
