@@ -3,7 +3,7 @@ title: "Real talk with a Data Scientist"
 date: 2019-07-13
 tags: [data science, learning]
 header:
-  image: "/images/real-talk-with-data-scientist.jpg" | height=100
+  image: "/images/real-talk-with-data-scientist.jpg"
   excerpt: "I found myself wondering about the characteristics of a Data Scientist, that's why I want to share my thoughts about what it means to be a Data Scientist and how a Data Scientist can deliver value"
 ---
 
