@@ -16,9 +16,11 @@ Let's discuss about the characteristics of a Data Scientist.
 ## *How can you know if you are a "good fit" as a Data Scientist?*
 
 Simply put, my understanding of working in the *"Big Data"* industry is about the ability to leverage
-- Computer Science
-- Mathematical Modeling
-- Data Visualization
+
++ Computer Science
++ Mathematical Modeling
++ Data Visualization
+
 in order to solve *"Big Questions"*.
 
 Note that **the work of a Data Scientist is not a one-man job** at all. In fact, you should carefully conceive the idea that [the best Data Scientists get out to talk to people](https://hbr.org/2017/01/the-best-data-scientists-get-out-and-talk-to-people) - and that's what I like the most about my daily job.
