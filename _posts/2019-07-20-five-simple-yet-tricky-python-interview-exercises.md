@@ -3,7 +3,7 @@ title: "5 Simple Yet Tricky Python Interview Exercises"
 date: 2019-07-20
 tags: [python, learning, interview]
 header:
-  image: "images\python-interview-questions.png"
+  image: "/images/python-interview-questions.png"
   excerpt: "Here's some of my very first Python challenges. Can you solve these 5 python interview exercises in no more than 15 minutes?"
 ---
 
