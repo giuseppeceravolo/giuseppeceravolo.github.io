@@ -13,6 +13,7 @@ In this post I challenge you to solve **5 easy, yet tricky, Python exercises tha
 
 Good luck and have fun! ;)
 
+
 ## *CHALLENGE 1: Print F made of x's*
 
 Using nested loops, write a piece of code to draw an F made of multiple x's, just like in the image below.
