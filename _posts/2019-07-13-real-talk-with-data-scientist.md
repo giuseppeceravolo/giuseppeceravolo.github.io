@@ -16,9 +16,11 @@ Let's discuss about the characteristics of a Data Scientist.
 ## *How can you know if you are a "good fit" as a Data Scientist?*
 
 Simply put, my understanding of working in the *"Big Data"* industry is about the ability to leverage
-- Computer Science
-- Mathematical Modeling
-- Data Visualization
+
++ Computer Science
++ Mathematical Modeling
++ Data Visualization
+
 in order to solve *"Big Questions"*.
 
 Note that **the work of a Data Scientist is not a one-man job** at all. In fact, you should carefully conceive the idea that [the best Data Scientists get out to talk to people](https://hbr.org/2017/01/the-best-data-scientists-get-out-and-talk-to-people) - and that's what I like the most about my daily job.
@@ -39,12 +41,12 @@ You must be aware that
 
 > Models are a dime a dozen.
 
-What I mean is that any Data Scientist can produce thousands of models in a matter of days.
+What I mean is that any Data Scientist can produce thousands of fancy models in a matter of days.
 
-They key and most-rewarding component of a Data Scientist job is
+The key and most-rewarding component of a Data Scientist job is
 
 >To know how to engineer features and implement the (only one) model into your company's pipeline to deliver value
 
-I hope it all makes sense to you. Please feel free to contact me - I'd love to have a talk with you!
+I hope it all makes sense to you. Please feel free to reach out to me - I'd love to have a talk with you!
 
 ~Giuseppe
