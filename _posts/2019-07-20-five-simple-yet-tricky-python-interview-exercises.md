@@ -18,7 +18,9 @@ Good luck and have fun! ;)
 
 Using nested loops, write a piece of code to draw an F made of multiple x's, just like in the image below.
 
-![Python Challenge Draw F Shape Output]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-draw-f-shape-output.png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-draw-f-shape-output.PNG" alt="Python Challenge Draw F Shape Output" class="full">
+
+![Python Challenge Draw F Shape Output]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-draw-f-shape-output.PNG)
 {: .full}
 
 HINT: make use of a list such as `numbers = [5, 2, 5, 2, 2]` the numbers in the list determine the number of x's to print on each line.
