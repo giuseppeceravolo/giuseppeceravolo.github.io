@@ -93,9 +93,9 @@ print(f'...the longest name is {longest_name}, which is {len(longest_name)}-char
 
 ## *Exercise 4: Build an Emoji Converter*
 
-Write a program that makes use of a dictionary to convert words into emojis.
+Write a program that makes use of a dictionary to convert characters into emojis.
 
-For example, if the user enters the message "I fell happy", the program will print "I fell 🙂", or if the user enters the message "I am sad", the program will print "I am 😫".
+For example, if the user enters the message "I fell happy :)", the program will print "I fell happy 🙂", or if the user enters the message "I am sad :(", the program will print "I am sad 😫".
 
 The first step is to create a dictionary that maps the strings of characters ":)" and ":(" into "🙂" and "😫", respectively.
 
@@ -147,7 +147,7 @@ Next, If you enter the command `start`, the program will reply with *"Car starte
 
 ![Python Challenge - Start Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-start-command.png){: .align-center}
 
-Similarly, if you enter the command `stop` the program will reply with *"Car stopped."*, but if the car had already been stopped then the programm will reply with *"Car already stopped!"*.
+Similarly, if you enter the command `stop` the program will reply with *"Car stopped."*, but if the car had already been stopped then the programm will reply with *"Car already stopped."*.
 
 ![Python Challenge - Stop Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-stop-command.png){: .align-center}
 
@@ -194,7 +194,7 @@ print("Program ended.")
 
 
 
-## Ending
+## Python Interview Exercises
 
 So, did you manage to solve these 5 Python exercises within 20 minutes?
 
