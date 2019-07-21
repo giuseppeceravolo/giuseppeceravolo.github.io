@@ -17,15 +17,17 @@ Good luck and have fun! ;)
 ## *CHALLENGE 1: Print F made of x's*
 
 Using nested loops, write a piece of code to draw an F made of multiple x's, just like in the image below.
-![python-challenge-draw-f-shape-output]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-draw-f-shape-output.png){: .align-center}
 
-HINT: make use of a list such as *numbers = [5, 2, 5, 2, 2]* the numbers in the list determine the number of x's to print on each line.
+![Python Challenge Draw F Shape Output]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-draw-f-shape-output.png)
+{: .full}
+
+HINT: make use of a list such as `numbers = [5, 2, 5, 2, 2]` the numbers in the list determine the number of x's to print on each line.
 
 DO NOT CHEAT: you should not multiply each number in the list by a string 'x'... You have to use a nested loop to generate a string that contains x's.
 
 ### Solution of Challenge 1
 
-```Python
+```python
 numbers = [5, 2, 5, 2, 2]
 
 for number in numbers:
