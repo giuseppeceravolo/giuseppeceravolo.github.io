@@ -7,7 +7,7 @@ header:
   excerpt: "Here's some of my very first Python challenges. Can you solve these 5 python interview exercises in no more than 20 minutes?"
 toc: true
 toc_label: "Python Exercises"
-toc_icon: "python"
+toc_icon: "code"
 ---
 
 When did you start learning Python? Do you remember your first Python piece of code? I remember doing my first Python exercises: I was so excited about *learning one of the most used programming language for Data Science*, although I was tackling very basic exercises.
