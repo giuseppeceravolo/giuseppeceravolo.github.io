@@ -6,7 +6,7 @@ header:
   image: "/images/python-interview-questions.png"
   excerpt: "Here's some of my very first Python challenges. Can you solve these 5 python interview exercises in no more than 20 minutes?"
 toc: true
-toc_label: "Python Exercies"
+toc_label: "Python Exercises"
 toc_icon: "python"
 ---
 
@@ -17,7 +17,7 @@ In this post I challenge you to solve **5 easy, yet tricky, Python exercises tha
 Good luck and have fun! ;)
 
 
-## *CHALLENGE #1: Print an F made of x's*
+## *Exercise 1: Print an F made of x's*
 
 Using nested loops, write a piece of code to print an F made of multiple x's, just like in the image below.
 
@@ -27,9 +27,9 @@ Using nested loops, write a piece of code to print an F made of multiple x's, ju
 
 DO NOT CHEAT: you should not multiply each number in the list by a string 'x'... You have to use a nested loop to generate a string that contains x's.
 
-**Can you write a piece of code to print an F made of multiple x's?**
+**Can you print an F made of multiple x's?**
 
-### Solution of Challenge 1
+### Solution of Exercise 1
 
 ```python
 numbers = [5, 2, 5, 2, 2]
@@ -43,7 +43,7 @@ for number in numbers:
 
 
 
-## *CHALLENGE #2: Remove duplicates from a list of numbers*
+## *Exercise 2: Remove duplicates from a list of numbers*
 
 Write a program to remove the duplicates in a list.
 
@@ -51,7 +51,7 @@ Let's say we have a list of numbers with a bunch of duplicates like this one: `n
 
 **Can you print a list that contains only the unique numbers in the above list?**
 
-### Solution of Challenge 2
+### Solution of Exercise 2
 
 ```python
 numbers = [1, 1, 4, 6, 5, 3, 4, 8, 7]
@@ -67,7 +67,7 @@ print(f'List of unique numbers: {uniques}')
 
 
 
-## *CHALLENGE #3: Find and print the longest string in a list*
+## *Exercise 3: Find and print the longest string in a list*
 
 Write a program to find and print the longest string in a list.
 
@@ -75,7 +75,7 @@ Let's say we have a list of names like this one: `names = ["Chiara", "Gianni", "
 
 **Can you find and print the longest string in the above list?**
 
-### Solution of Challenge 3
+### Solution of Exercise 3
 
 ```python
 names = ["Chiara", "Gianni", "Alex", "Emi", "Giuseppe", "Davide"]
@@ -91,7 +91,7 @@ print(f'...the longest name is {longest_name}, which is {len(longest_name)}-char
 
 
 
-## *CHALLENGE #4: A*
+## *Exercise 4: Build an Emoji Converter*
 
 Write a program that makes use of a dictionary to convert words into emojis.
 
@@ -99,9 +99,9 @@ For example, if the user enters the message "I fell happy", the program will pri
 
 The first step is to create a dictionary that maps the strings of characters ":)" and ":(" into "🙂" and "😫", respectively.
 
-**Can you convert translate characters into emojis?**
+**Can you convert special characters into emojis?**
 
-### Solution of Challenge 3
+### Solution of Exercise 4
 
 ```python
 message = input(">")
@@ -119,13 +119,13 @@ print(output)
 
 
 
-## *CHALLENGE #5: Car Engine Simulator*
+## *Exercise 5: Car Engine Simulator*
 
 In this exercise you have to code a car engine simulator.
 
 First, when the program is running it will be waiting for an input from the user like shown in the image below (note the "> ").
 
-![Python Challenge - Waiting for Input]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-waiting-for-input.PNG){: .align-center}
+![Python Challenge - Waiting for Input]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-waiting-for-input.png){: .align-center}
 
 This means that the program is waiting for the user to enter a command.
 
@@ -137,27 +137,27 @@ The program will accept one of the following four commands, either in lower or i
 
 For example, here's the output of the help command.
 
-![Python Challenge - Help Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-help-command.PNG){: .align-center}
+![Python Challenge - Help Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-help-command.png){: .align-center}
 
 Please note that any other commands that the user may enter will result in the program telling the user that *"Sorry, I don't understand that... Enter 'help' for command instructions."*.
 
-![Python Challenge - Command Not Supported]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-command-not-supported.PNG){: .align-center}
+![Python Challenge - Command Not Supported]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-command-not-supported.png){: .align-center}
 
 Next, If you enter the command `start`, the program will reply with *"Car started... Ready to go!"*, but if the car had already been started then the program will reply with *"Car already started!"*.
 
-![Python Challenge - Start Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-start-command.PNG){: .align-center}
+![Python Challenge - Start Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-start-command.png){: .align-center}
 
 Similarly, if you enter the command `stop` the program will reply with *"Car stopped."*, but if the car had already been stopped then the programm will reply with *"Car already stopped!"*.
 
-![Python Challenge - Stop Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-stop-command.PNG){: .align-center}
+![Python Challenge - Stop Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-stop-command.png){: .align-center}
 
 Finally, if you enter the command `quit` the program will end.
 
-![Python Challenge - Quit Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-quit-command.PNG){: .align-center}
+![Python Challenge - Quit Command]({{ site.url }}{{ site.baseurl }}/images/exercises/python-challenge-quit-command.png){: .align-center}
 
-**Can you write a program to simulate a "start and stop" car like this?**
+**Can you simulate a "start and stop" car like this?**
 
-### Solution of Challenge 5
+### Solution of Exercise 5
 
 ```python
 command = ""
