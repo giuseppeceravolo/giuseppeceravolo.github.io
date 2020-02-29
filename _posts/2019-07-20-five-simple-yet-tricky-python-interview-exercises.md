@@ -35,10 +35,7 @@ DO NOT CHEAT: you should not multiply each number in the list by a string 'x'...
 numbers = [5, 2, 5, 2, 2]
 
 for number in numbers:
-    output_line = ''
-    for x in range(number):
-        output_line += 'x'
-    print(output_line)
+    print("x" * number)
 ```
 
 
@@ -194,7 +191,7 @@ print("Program ended.")
 
 
 
-## Python Interview Exercises
+# Conclusions
 
 So, did you manage to solve these 5 Python exercises within 20 minutes?
 
