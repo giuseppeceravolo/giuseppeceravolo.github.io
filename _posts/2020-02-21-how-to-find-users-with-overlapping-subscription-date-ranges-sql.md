@@ -14,7 +14,7 @@ What if you wanted to highlight the users who have subscribed to your company's 
 
 # Question
 
-In other words, given a table of service subscriptions, say for a specific month of the year, with a subscription start date and subscription end date for each user, how would you **write a query that returns 1 (true) or 0 (false) whether or not each user has a subscription date range that overlaps with any other user's subscription rate**?
+In other words, given a table of service subscriptions, say it is filtered for a specific period of time you are interested in, with a subscription start date and subscription end date for each user, how would you **write a query that returns 1 (true) or 0 (false) whether or not each user has a subscription date range that does NOT overlap with any other user's subscription range**?
 
 If you have no clue, then keep reading! ;)
 
@@ -44,10 +44,10 @@ Output:
 
 | user_id | overlap |
 |---------|---------|
-| 1       | 1       |
-| 2       | 1       |
-| 3       | 1       |
-| 4       | 0       |
+| 1       | 0       |
+| 2       | 0       |
+| 3       | 0       |
+| 4       | 1       |
 
 
 # Answer's Structure Layout
@@ -96,7 +96,7 @@ LEFT JOIN subscriptions AS s2
 In this way we set s1 as our A and s2 as our B. Given this conditional join, a user_id from s2 should exist for each
 user_id in s1 on the condition where there exists overlap between the dates.
 
-Please refer to this [SQL Fiddle](http://sqlfiddle.com/#!9/d17c8/1) to run the below queries to check the solution.
+Please refer to this [SQL Fiddle](http://sqlfiddle.com/#!9/d17c8/4) to run the below queries and check the solution.
 
 ## CREATE TABLE
 
@@ -124,8 +124,8 @@ INSERT INTO `subscriptions`(`user_id`,`start_date`,`end_date`) VALUES (4,'2020-0
 SELECT
     s1.user_id,
     MAX(CASE
-        WHEN s2.user_id IS NOT NULL THEN 1
-        ELSE 0
+        WHEN s2.user_id IS NOT NULL THEN 0
+        ELSE 1
     END) AS overlap
 FROM subscriptions AS s1
 LEFT JOIN subscriptions AS s2
@@ -135,7 +135,7 @@ LEFT JOIN subscriptions AS s2
 GROUP BY 1
 ```
 
-You can check the output in this [SQL Fiddle](http://sqlfiddle.com/#!9/d17c8/1).
+You can check the output in this [SQL Fiddle](http://sqlfiddle.com/#!9/d17c8/4).
 
 # Conclusions
 
