@@ -1,10 +1,10 @@
 ---
-title: "How to find users with overlapping date ranges in SQL?"
+title: "How to find users without overlapping date ranges in SQL?"
 date: 2020-02-21
 tags: [sql, learning, interview]
 header:
-  image: "/images/sql-users-overlap-subscription-date-range.png"
-  excerpt: "What if you need to find the users whose subscription date range does not overlap with any other user's subscription date range? Here's the query for you."
+  image: "/images/sql-users-without-overlap-subscription-date-range.png"
+  excerpt: "What if you need to find the users whose subscription date range does NOT overlap with any other user's subscription date range? Here's the query for you."
 toc: true
 toc_label: "SQL Question"
 toc_icon: "code"
@@ -12,9 +12,13 @@ toc_icon: "code"
 
 What if you wanted to highlight the users who have subscribed to your company's service in a period of time different than any other users?
 
+Let's pretend that you are curious and wish to investigate further on those *unique* users who joined your company's service in a period different than any other users...
+
 # Question
 
-In other words, given a table of service subscriptions, say it is filtered for a specific period of time you are interested in, with a subscription start date and subscription end date for each user, how would you **write a query that returns 1 (true) or 0 (false) whether or not each user has a subscription date range that does NOT overlap with any other user's subscription range**?
+In other words, given a table of service subscriptions, say it is already filtered for a specific period of time you are particularly interested in, with a subscription start date and subscription end date for each user.
+
+How would you **write a query that returns 1 (true) or 0 (false) whether or not each user has a subscription date range that does NOT overlap with any other user's subscription range**?
 
 If you have no clue, then keep reading! ;)
 
