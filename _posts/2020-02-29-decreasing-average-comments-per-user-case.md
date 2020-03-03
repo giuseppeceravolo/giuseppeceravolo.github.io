@@ -1,152 +1,175 @@
 ---
-title: "How to find users without overlapping date ranges in SQL?"
-date: 2020-02-21
-tags: [sql, learning, interview]
+title: "Find out reasons for decreasing average number of comments per user"
+date: 2020-02-29
+tags: [case, learning, interview]
 header:
-  image: "/images/sql-users-without-overlap-subscription-date-range.png"
-  excerpt: "What if you need to find the users whose subscription date range does NOT overlap with any other user's subscription date range? Here's the query for you."
+  image: "/images/decreasing-average-number-of-comments-per-user-case.png"
+  excerpt: "How would you investigate potential reasons for a slow yet constant decrease in the average number of comments per user? What metrics would you look at?"
 toc: true
-toc_label: "SQL Question"
+toc_label: "Case"
 toc_icon: "code"
 ---
 
-What if you wanted to highlight the users who have subscribed to your company's service in a period of time different than any other users?
+Let's pretend that you are working at a Social Media Company and your boss askes you: "The average number of comments per user has decreased over the last three months. How would you point out some reasons for this and what metrics would you look into?"
 
-Let's pretend that you are curious and wish to investigate further on those *unique* users who joined your company's service in a period different than any other users...
+I enjoy solving this kind of case-based questions because they let your own flavor shine.
+
+What's your strategy? Here's mine, have fun! :)
 
 # Question
+ ~*"Let's say you work in a Social Media Company that has just done a launch in a new city.
+   Looking at weekly metrics, you see a slow decrease in the average number of comments per user from January to March in the city.
+   The company has been consistently growing new users in the city from January to March.
+   What are some reasons on why the average number of comments per user would be decreasing?
+   And what metrics would you look into?"*
 
-In other words, given a table of service subscriptions, say it is already filtered for a specific period of time you are particularly interested in, with a subscription start date and subscription end date for each user.
+# 1. Summarize the question
+I'm working in a Social Media Company that has just done a launch in a new city where, from January to March, we have been experiencing a slow decrease in the average number of comments per user.
+At the same time, the number of new users in the city has been consistently growing.
+We want to point out some reasons for why the average number of comments per user is decreasing, as well as the metrics to look at.
+Is that correct?
 
-How would you **write a query that returns 1 (true) or 0 (false) whether or not each user has a subscription date range that does NOT overlap with any other user's subscription range**?
+ ~*"Yes, it is correct."*
 
-If you have no clue, then keep reading! ;)
+# 2. Verify the objective(s)
+Now, I would like to know what constitutes success for the company: we want to discover some reasons for the slow decrease in the average number of comments per user, yet we might also want, for example, the average number of comments per user to increase? If yes, to what value?
 
-Let's assume that we have a simple table like the following one.
+Besides this objective, are there any other objectives I should be aware of?
 
-**'subscriptions' table**:
+ ~*"The average number of comments per user fell from 3 in January down to 2 in March, and it was 2.5 in February.  We aim at making it increase back to 3. Also, please be aware that we aim at expanding into the new city and saturate it as quickly as possible, capturing the greatest market share while keeping users engaged."*
 
-| COLUMN_NAME   | DATA_TYPE |
-|---------------|-----------|
-| user_id       | int       |
-| start_date    | date      |
-| end_date      | date      |
+# 3. Ask clarifying questions
+So the average number of comments per user fall 33% from January to March, and I assume that we have done the launch in
+the new city starting from January, is that correct?
+
+ ~*"Yes, it is correct."*
+
+I would like to know the total number of users from January to March.
+
+ ~Here's a summary for you.
+
+ | month | comments per user |
+ |-------|-------------------|
+ | Jan   | 10,000            |
+ | Feb   | 20,000            |
+ | Mar   | 30,000            |
+
+So this means that the total number of comments was 30,000, 50,000, and 60,000 in January, February, and March, respectively.
+Okay, now we can confirm that the decrease in the average number of comments per user is not an effect of a declining user base.
+
+One more question: is this city close, or similar, to one or more cities where we have already done a launch in? I would like to compare the above metrics between the cities.
+
+ ~*"No, the only data we have is about the users in the new city we have just done a launch in."*
+
+# 4. Lay out the structure
+I would like to take some time to **come up with a structure of possible reasons, which are mutually exclusive and collectively exhaustive** (MECE). Can I take a few minutes to think about it?
+
+ ~*"Please, take your time."*
+
+Here are my MECE alternative scenarios **according to two variables, namely users engagement and platform performance**:
+
+* (A) **users are engaged and platform is performing**: the average number of comments per user is decreasing due to the great increase of total users - simply because the average number of comments per user in January is not representative of the average number of comments per user  of the entire market
+* (B) **users are NOT engaged and platform is performing**: the average number of comments per user is decreasing because users are less and less engaged with the content they find in the platform - which is bad and requires immediate actions from Marketing
+* (C) **users are engaged and platform is NOT performing**: the average number of comments per user is decreasing because of some technical issues or recent change within the platform, in particular when users try to post comments - which is bad and requires immediate actions from IT.
+
+ ~*"Good, and what metrics would you look into to verify them?"*
+
+I would **look into the following metrics**, by scenario:
+
+* (A) business growth metrics: average number of comments per user
+* (B) user engagement metrics: churn rate; average number of comments per active (retained) users; average time spent on platform per active (retained) user
+* (C) IT-related metrics: recent change in the comments section; average number of crashes per users; average time for page load (after commenting)
+
+ ~*"Okay. How would you move forward in your analysis?"*
+
+# 5. State your hypothesis (and solution)
+Now I would like to state my hypothesis in order to support...
+
+## alternative A
+ ... We have experiencing a slow decrease in the average number of comments per users as a natural consequence of the huge (and expected) increase of the total number of users.
+ I am going to assume that all users are active and the platform is performing well.
+ The reason for a decrease in the average number of comments per user is simply the fact that users who joined in January are not representative of the behavior of all potential users, and are different from users who joined later on (in February and in March). I assume that users who joined in January are different than users who joined in March, in terms of engagement, so I can check whether there has been a any changes in the average number of comments per user considering on one side the new users who joined in January (at the beginning of the period under analysis) and on the other side the new users who joined in March (at the end of the period under analysis).
+
+ To this purpose, I would suggest two analytical solutions:
+ 1. the first one is simpler, quicker and less statistically significant, namely just **plotting and looking at the average number of comments per users *by week* of new users in January and of new users in March**, and visually verify if these two lines behave differently;
+ 2. the second one requires more time and more effort although it is more robust from a statistical viewpoint, namely **running a Hypothesis Test (\*) to compare the average number of comments of a group of new users who joined in March with respect to he average number of comments of a group of new users who joined in January**, and statistically verify if they are indeed different.
+
+### Conclusion & Recommendations
+ In either cases, I expect to find significance difference between the average number of comments per user in January and in March. Therefore, there would be no action to take to make the average number of comments per user increase back to 3 - this slow decrease is just a normal (and expected) adjustment as the user base is increasing.
+
+ Also, given the objective of keeping users engaged, I would recommend to focus on user engagement (i.e. looking at  metrics like average time spent on platform per user) to prevent it from decreasing.
+
+## alternative B
+ ... We have experiencing a slow decrease in the average number of comments per users due to a constant decrease in user engagement despite an increase of the total number of users.
+ I am going to assume that all users are less and less engaged with the content they find on the platform, although the platform itself is performing well.
+ I assume that churn rate is behaving something like 25%, 20%, 15% on month 1, month 2, month 3, respectively.
+ Accordingly, now we can evaluate the number of comments per active (i.e. retained) user and see how it changed from January (at the beginning of the period under analysis) to March (at the end of the period under analysis).
+
+ To this purpose, I would suggest to evaluate the average number of comments per active user, by month, as follows:
+
+ <img src="https://render.githubusercontent.com/render/math?math=average.number.of.comments.per.active.user=\frac{total.number.of.comments}{total.number.of.active.users}">
+
+ where the *total number of active users*, by month, is equal to:
+
+ <img src="https://render.githubusercontent.com/render/math?math=total.number.of.active.users = total.number.of.users \times (1 - churn.rate)">
+
+ Let's run the numbers, by month:
+ - Jan: 10,000 active users for 30,000 comments --> 3 comments per active user
+ - Feb: \[10,000 * (1 - 25%)\] + 10,000 = 17,500 active users for 50,000 comments --> 2.85 comments per active user
+ - Mar: \[10,000 * (1 - 25%) * (1 - 20%)\] + \[10,000 * (1 - 25%)\] + 10,000 = 23,500 active users for 60,000 comments --> 2.55 comments per active user
+
+### Conclusion & Recommendation
+ Given the churned rates, as assumed above, we have verified that the average number of comments per active user is decreasing.
+ Also, I would like to verify whether the average time spent on platform per **active** user has decreased too, during the same period of time. Overall, I would recommend to further analyze the reasons of churn, for example by collecting feedback from churned customers and act accordingly - hopefully, this will make the average number of comments per user grow back to 3.
+
+## alternative C
+ ... We have been experiencing a slow decrease in the average number of comments per users due to problems with the platform: for example, it is not responding well to the increase of the total number of users or there has been a recent change in the platform (like a new location for the comments section).
+ I am going to assume that all users are engaged with the platform but they experience problems when attempting to post comments because of technical issues with the platform.
+
+ To this purpose, I can look at the aggregated metrics of users activities, such as the weekly number of crashes or the average time for page load after commenting by week. Simply plotting these two aggregate metrics by week would give us a visual proof for this scenario.
+
+ Also, I would investigate whether there has been a recent change in the comments section of the platform, for example it has been moved far away from its original position and users are now wondering where to find it.
+
+### Conclusion & Recommendation
+ Given the platform inability to promptly react to the increase in user base or its recent changes as per the comments section, I would recommend to take immediate actions to reduce crashes, for example making use of more reactive and performing servers, and/or to let user familiarize with the new location of the comments section.
+ This counteraction would foster the company expansion into the new city and ensure user engagement, making the average number of comments per user grow back to 3.
 
 
-## Example
+## (\*) How would you run the hypothesis test?
 
-Input:
+Let's say that the average number of comments of a group of new users who joined in January is known and we believe it represents the population of all potential users from the city: 3 comment per user; whereas the average number of comments of a sample group of new users who joined in March is μ, which we believe to be lower than 3.
 
-| user_id | start_date | end_date   |
-|---------|------------|------------|
-| 1       | 2020-02-01 | 2020-02-29 |
-| 2       | 2020-02-15 | 2020-02-17 |
-| 3       | 2020-02-28 | 2020-03-04 |
-| 4       | 2020-03-05 | 2019-03-10 |
+The goal of the test is to see if μ is lower than 3, so the test needs to be set as follows:
+- the Null Hypothesis (H0), which is the hypothesis we want to reject, is μ = 3
+- the Alternative Hypothesis (H1), which is our claim, is μ < 3
 
-Output:
+We will run this test with the t-student statistics because the population standard deviation is unknown:
 
-| user_id | overlap |
-|---------|---------|
-| 1       | 0       |
-| 2       | 0       |
-| 3       | 0       |
-| 4       | 1       |
+<img src="https://render.githubusercontent.com/render/math?math=t=\frac{\big(\bar{X}-\mu\big)}{s/\sqrt{n}}">
 
+where Xbar and s are the sample mean and sample standard deviation, respectively.
 
-# Answer's Structure Layout
+Recalling the conditions for using a t-model:
+1. there is no reason to think the average number of comments per user is normally distributed (they might be, but this
+isn’t something we could know for sure), so the sample has to be large (more than 30); and
+2. the sample has to be random, so we pick new users who joined in March by randomly selecting users among different days, times, locations, devices, sex, etc.
 
-Given two date ranges, A and B, what determines if they would overlap?
+Let's say that we have a sample size of 1,000 new users who joined in March and that their average number of comments per user is 2 with a sample standard deviation of 1.
 
-Let's assume that date range A is completely before date range B as below:
+The question is: **assuming that the average number of comments per user is indeed equal to 3 (January's metric), what is the probability that 1,000 users who joined in March will have an average number of comments of 2 or less?**
 
-    |-- date range A --|
-                         |-- date range B --|
+Let's run the test statistic:
 
-We can see that the condition **A < B holds if end_A < start_B**.
+<img src="https://render.githubusercontent.com/render/math?math=t=\frac{\big(2-3\big)}{1/\sqrt{1000}}=-31.6">
 
-On the contrary, let's assume that date range A is completely after date range B as below:
+The sample mean for our random sample is approximately 31.6 standard errors below the overall mean of 3. We know from previous experience that a sample mean this far below µ is very unlikely. With a t-score this low, the P-value is very small (say much lower than 0.001). The P-value helps us determine if the difference we see between the data and the hypothesized value of µ is statistically significant or due to chance.
 
-                         |-- date range A --|
-    |-- date range B --|
-
-We can see that the condition **A > B holds if start_A > end_B**.
-
-As a result, we can state that **overlap exists if neither one of the two following conditions is true**:
-- end_A < start_B
-- start_A > end_B
-
-In other terms, if one range is neither completely after the other, nor completely before the other, then they must overlap.
-
-Let's represent such non-overlapping condition with logical operators:
-
-**(end_a ≥ start_B) AND (start_A ≤ end_B)**
-
-Given this logical condition, **are you able to apply it to an SQL query?**
-
-Let me give a hint: We can use this condition in the WHERE clause of the LEFT JOIN between the same table in order to compare each user to a different user in the same table.
-
-
-## LEFT JOIN
-
-```sql
-FROM subscriptions AS s1
-LEFT JOIN subscriptions AS s2
-    ON s1.user_id != s2.user_id
-        AND s1.end_date >= s2.start_date
-        AND s1.start_date <= s2.end_date
-```
-
-In this way we set s1 as our A and s2 as our B. Given this conditional join, a user_id from s2 should exist for each
-user_id in s1 on the condition where there exists overlap between the dates.
-
-Please refer to this [SQL Fiddle](http://sqlfiddle.com/#!9/d17c8/4) to run the below queries and check the solution.
-
-## CREATE TABLE
-
-```sql
-CREATE TABLE `subscriptions` (
-  `user_id` int(11) NOT NULL,
-  `start_date` date NOT NULL,
-  `end_date` date NOT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-```
-
-## INSERT (example data)
-
-```sql
-INSERT INTO `subscriptions`(`user_id`,`start_date`,`end_date`) VALUES (1,'2020-02-01','2020-02-29');
-INSERT INTO `subscriptions`(`user_id`,`start_date`,`end_date`) VALUES (2,'2020-02-15','2020-02-17');
-INSERT INTO `subscriptions`(`user_id`,`start_date`,`end_date`) VALUES (3,'2020-02-28','2020-03-04');
-INSERT INTO `subscriptions`(`user_id`,`start_date`,`end_date`) VALUES (4,'2020-03-05','2020-03-10');
-```
-
-## Final Query
-
-```sql
-SELECT
-    s1.user_id,
-    MAX(CASE
-        WHEN s2.user_id IS NOT NULL THEN 0
-        ELSE 1
-    END) AS overlap
-FROM subscriptions AS s1
-LEFT JOIN subscriptions AS s2
-    ON s1.user_id != s2.user_id
-        AND s1.start_date <= s2.end_date
-        AND s1.end_date >= s2.start_date
-GROUP BY 1
-```
-
-You can check the output in this [SQL Fiddle](http://sqlfiddle.com/#!9/d17c8/4).
+Finally, we will set a significance level (α), say 95%, and **we see that P-value < α**. The only possible conclusion is to reject the null hypothesis in favor of the alternative hypothesis: **there is statistically significant evidence to state that the average number of comments per user for new users who joined in March is lower than the average number of comments per users for new users in January**.
 
 # Conclusions
 
-I hope you found this post useful - I would love to hear from you what you think about my query.
+I hope you found this post useful - I would love to hear from you what you think about my solution.
 
-Did you manage to find an alternative, perhaps more efficient, solution?
-
-Also, please share with me one SQL challenge you had to face recently during your work! :)
+Did you manage to find alternative scenarios or different metrics to look at? :)
 
 ~Giuseppe
