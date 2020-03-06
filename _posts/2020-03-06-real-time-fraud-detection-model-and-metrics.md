@@ -100,7 +100,7 @@ Precision and Recall for different thresholds. A high AUPRC represents both high
 
 Also, I would choose a model that is fast in delivering the results, meaning within a reasonably low amount of time, because we need to text the customer in case of fraudulent transactions. This is often called Prediction Speed.
 
-Maximizing the Recall and the Prediction Speed involves solving a multi-objective optimization problem. In this type of problems, in general, there is no single optimal solution - we need to investigate the so-called "Pareto frontier" of different optimal values (Recall vs Prediction Speed).
+Maximizing both the Recall and the Prediction Speed involves solving a multi-objective optimization problem. In this type of problems, in general, there is no single optimal solution - we need to investigate the so-called "Pareto frontier" of different optimal values (Recall vs Prediction Speed).
 
 ## 5. State your hypothesis (and solution)
 
