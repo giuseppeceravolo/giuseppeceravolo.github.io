@@ -31,7 +31,6 @@ In particular, we need to prove that every element is retrieved from the stream 
 # Code
 
 ~~~python
-
 import random
 
 
