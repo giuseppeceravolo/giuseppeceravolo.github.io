@@ -63,7 +63,7 @@ def select_random_number_from_stream(up_to, i, previous):
 
 stream = [1, 2, 3, 4, 5, 6, 7, 8]
 n = len(stream)
-# Use a different seed value for every run.
+
 for i in range(n):
     if i == 0:
         x = stream[0]
