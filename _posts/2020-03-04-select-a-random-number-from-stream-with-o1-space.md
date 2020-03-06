@@ -3,7 +3,7 @@ title: "Select a random number from a stream with O(1) space"
 date: 2020-03-04
 tags: [python, learning, interview]
 header:
-  image: "/images/select-a-random-number-from-stream-with-o1-space.png"
+  image: "/images/select-a-random-number-from-stream-with-o1-space.jpg"
   excerpt: "Let's write a piece of code to pick every element in a stream with 1/n probability, where n is the number of items seen so far."
 toc: true
 toc_label: "Case"
