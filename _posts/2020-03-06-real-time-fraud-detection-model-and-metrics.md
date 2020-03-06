@@ -28,7 +28,7 @@ Is that correct?
 
  ~*"Yes, it is correct."*
 
-## Verify the objective
+## 2. Verify the objective
 
 Now, I would like to know more about what really constitutes success for the company.
 
@@ -40,7 +40,7 @@ That's good to know, thank you! Given this other objective, I can confirm that:
  - it makes good business sense to build a model that maximizes detection of actual frauds, since we will text customers a verification code in all cases of potential fraud - and this will build trust and reputation
  - our model must be fast in the testing phase, so we will also optimize for such model performance
 
-## Ask clarifying questions
+## 3. Ask clarifying questions
 
 I need to ask you some other clarifying questions.
 
@@ -109,7 +109,7 @@ Now, I would like to state my hypothesis in order to support my solution.
 I am going to assume that Naïve Bayes together with Logistic Regression are used only to provide a good benchmark to be used as a reference for more advanced models. Indeed, I am confident that all other models can perform above them.
 I would run all of them and pick the model that provides the highest Recall at the fastest Prediction Speed.
 
-# BONUS QUESTION
+# Bonus Question
 
  ~*"How would you handle unbalanced data?".*
 
