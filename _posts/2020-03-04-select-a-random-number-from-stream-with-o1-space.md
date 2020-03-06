@@ -48,7 +48,7 @@ def select_random_number_from_stream(up_to, i, previous):
     :return: a random number from stream with probability 1/up_to
     """
     print("i={} up_to={} previous={}".format(i, up_to, previous))
-    # generate a random number from 0 to up_to - 1
+    # generate a random number from 1 to up_to
     rnd = random.randrange(start=1, stop=up_to+1)
     print("rnd=random.randrange({})={}".format(up_to, rnd))
     # replace the previous random number with new random number with 1/up_to probability
