@@ -12,7 +12,7 @@ toc_icon: "code"
 
 An algorithm is said to take *"constant space complexity"*, i.e. *O(1)*, if *the additional space complexity used by the algorithm*, meaning the extra space that it needs apart from the initial space occupied by the input data, *is constant regardless of the amount of input data*.
 
-This concept is different than an algorithm is said to run in "constant time", which, insteand, requires the algorithm to run in the same, and constant, amount of time regardless of the input size.
+This concept is different than an algorithm is said to run in "constant time", which, instead, requires the algorithm to run in the same, and constant, amount of time regardless of the input size.
 
 # Question
 
@@ -134,19 +134,19 @@ Here we have two alternative scenarios:
  - if the picked random number is equal to stream[i], in other words in case *rnd = up_to*, then we replace the previous result, meaning the previously picked random number, with up_to
  - if the picked random number is not equal to stream[i], then we keep the previously picked random number
 
-Now we need to prove that this code is able to pick every element in the stream with 1/n probability, where n is the number of items seen so far.
+Now we need to **prove that this code is able to pick every element in the stream with 1/n probability, where n is the number of items seen so far**.
 
-To simplify proof, let us first consider when the *last element* is processed and its probability of being picked.
-The last element, stream[n], replaces the previously-stored result with 1/n probability: only when the random number generated within the function is equal to stream[n].
+To simplify proof, **let us first consider when the **last element** is processed and its probability of being picked.
+The last element, stream[n], replaces the previously-stored result with *1/n probability*: only when the random number generated within the function is equal to stream[n].
 
-Next, let us consider when the *second-last element* is processed and its total probability of being picked.
+Next, **let us consider when the second-last element** is processed and its total probability of being picked.
 When the second-last element, stream[n-1], is processed the first time, namely when the for loop runs for i = n-2,
-the probability that it replaces the previous result is **1/(n-1)** for the reason discussed for last element in stream (see above).
+the probability that it replaces the previous result is *1/(n-1)* for the reason discussed for last element in stream (see above).
 When the second-last element, stream[n-1], is processed the second and last time, namely when the for loop runs for i = n-1,
-the probability that it stays as result is **(n-1)/n**: only when the random number generated within the function is not equal to stream[n].
-So the total probability that the second-last element is picked is **1/(n-1) \* (n-1)/n]** which is equal to 1/n.
+the probability that it stays as result is *(n-1)/n*: only when the random number generated within the function is not equal to stream[n].
+So the total probability that the second-last element is picked is *1/(n-1) x (n-1)/n]* which is equal to *1/n*.
 
-Similarly, we can prove for third-last element and all the others.
+Similarly, **we can prove for third-last element and all the others**.
 
 # Conclusions
 
