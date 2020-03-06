@@ -61,18 +61,64 @@ def select_random_number_from_stream(up_to, i, previous):
     return res
 
 
-stream = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+stream = [1, 2, 3, 4, 5, 6, 7, 8]
 n = len(stream)
 # Use a different seed value for every run.
 for i in range(n):
     if i == 0:
         x = stream[0]
-        print("i={} up_to={} previous=nana".format(i, stream[0]))
+        print("i={} up_to={} previous=nan".format(i, stream[0]))
         print("Random number from first", (i + 1), "number is", x)
     else:
         x = select_random_number_from_stream(up_to=stream[i], i=i, previous=x)
         print("Random number from first", (i + 1), "numbers is", x)
     print("-"*50)
+
+~~~
+
+# Example Result
+
+~~~python
+i=0 up_to=1 previous=nan
+Random number from first 1 number is 1
+--------------------------------------------------
+i=1 up_to=2 previous=1
+rnd=random.randrange(2)=2
+rnd == up_to --> up_to is chosen : 2
+Random number from first 2 numbers is 2
+--------------------------------------------------
+i=2 up_to=3 previous=2
+rnd=random.randrange(3)=3
+rnd == up_to --> up_to is chosen : 3
+Random number from first 3 numbers is 3
+--------------------------------------------------
+i=3 up_to=4 previous=3
+rnd=random.randrange(4)=4
+rnd == up_to --> up_to is chosen : 4
+Random number from first 4 numbers is 4
+--------------------------------------------------
+i=4 up_to=5 previous=4
+rnd=random.randrange(5)=3
+rnd != up_to --> previous is chosen : 4
+Random number from first 5 numbers is 4
+--------------------------------------------------
+i=5 up_to=6 previous=4
+rnd=random.randrange(6)=6
+rnd == up_to --> up_to is chosen : 6
+Random number from first 6 numbers is 6
+--------------------------------------------------
+i=6 up_to=7 previous=6
+rnd=random.randrange(7)=1
+rnd != up_to --> previous is chosen : 6
+Random number from first 7 numbers is 6
+--------------------------------------------------
+i=7 up_to=8 previous=6
+rnd=random.randrange(8)=3
+rnd != up_to --> previous is chosen : 6
+Random number from first 8 numbers is 6
+--------------------------------------------------
+
+Process finished with exit code 0
 
 ~~~
 
