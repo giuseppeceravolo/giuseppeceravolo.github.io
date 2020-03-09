@@ -56,6 +56,7 @@ Given the fact that we will text our customers a verification code for every tra
 fraudulent, I would suggest to maximize recall rather than precision. To clarify this idea, given the above definitions, respectively, please tell me:
  1. out of 100 transactions that our model classifies as fraudulent, how many of them must be actual frauds?
  2. out of 100 fraudulent transactions, how many of them our model must detect?
+
 Please note that these two metrics usually behave as a trade-off: the more precise (selective) our mode is, the less cases of real fraud it will detect, and vice versa.
 If you cannot really tell me a number, please just tell me which of the two is more important than the other.
 
