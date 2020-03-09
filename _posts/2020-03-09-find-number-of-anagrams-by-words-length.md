@@ -500,7 +500,7 @@ for value in dict_of_sum_anagrams_count_by_length.values():
 
 print("the sum of the total number of anagrams by word length is: {:,}".format(total_number_of_anagrams))
 
->>>the sum of the total number of anagrams by word length is: 32,890
+>>>"the sum of the total number of anagrams by word length is: 32,890"
 ~~~
 
 This number (32,890) is the same result we got before when we calculated the total number of anagrams of words with non-singular anagrams!
