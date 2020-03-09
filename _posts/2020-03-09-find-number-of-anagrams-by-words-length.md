@@ -85,7 +85,7 @@ Let's load the data by running the following code.
 wordclean = sorted(list(set([word.strip().lower() for word in open('words', 'r').readlines()])))
 print("we have a total number of words equal to: {:,}".format(len(wordclean)))
 
-we have a total number of words equal to: 234,371
+>>>"we have a total number of words equal to: 234,371"
 ~~~
 
 # Step 1: group words by their length
@@ -262,8 +262,8 @@ def signature(word):
 print("the signature of the word 'giuseppe' is: {}".format(signature('giuseppe')))
 print("which is equal to the signature of the word 'seppegiu': {}".format(signature('giuseppe') == signature('seppegiu')))
 
-the signature of the word 'giuseppe' is: eegippsu
-which is equal to the signature of the word 'seppegiu': True
+>>>"the signature of the word 'giuseppe' is: eegippsu"
+>>>"which is equal to the signature of the word 'seppegiu': True"
 ~~~
 
 ## Step 2.2: create a dictionary of lists of anagrams indexed by their signature
@@ -290,7 +290,7 @@ For example, we can print the anagrams of the word 'are'.
 ~~~python
 print("the anagrams of the word 'are' are: {}".format(dict_of_word_list_by_signature[signature('are')]))
 
-the anagrams of the word 'are' are: ['aer', 'are', 'ear', 'era', 'rea']
+>>>"the anagrams of the word 'are' are: ['aer', 'are', 'ear', 'era', 'rea']"
 ~~~
 
 ## Step 2.3: define a function to get the list of anagrams of any given word
@@ -311,7 +311,7 @@ dict_word_anagrams = {word: get_word_anagrams(word) \
 
 print("the total number of anagrams of words with non-singular anagrams is: {:,}".format(len(dict_word_anagrams)))
 
-the total number of anagrams of words with non-singular anagrams is: 32,890
+>>>"the total number of anagrams of words with non-singular anagrams is: 32,890"
 ~~~
 
 Actually, this is the total number of anagrams of words with non-singular anagrams: 32,890. We will use this value to double check our final solution!
@@ -331,7 +331,7 @@ for length, words in dict_of_words_list_by_length.items():
 Let's print some elements of this dictionary.
 
 ~~~python
-dict_of_anagrams_list_by_length
+print(dict_of_anagrams_list_by_length)
 
 {1: {},
  2: {'ab': ['ab', 'ba'],
@@ -500,7 +500,7 @@ for value in dict_of_sum_anagrams_count_by_length.values():
 
 print("the sum of the total number of anagrams by word length is: {:,}".format(total_number_of_anagrams))
 
-the sum of the total number of anagrams by word length is: 32,890
+>>>the sum of the total number of anagrams by word length is: 32,890
 ~~~
 
 This number (32,890) is the same result we got before when we calculated the total number of anagrams of words with non-singular anagrams!
