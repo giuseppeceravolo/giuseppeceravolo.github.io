@@ -80,9 +80,9 @@ Now I would like to take some time to **come up with a structure of potential mo
 
 ### What model to build
 
-First, we are in need of a *binary classifier*: a model that is able to output either 1 (fraud) or 0 (non-fraud).
+First, we are in need of a **binary classifier**: a model that is able to output either 1 (fraud) or 0 (non-fraud).
 
-Here is *my list of potential models* that we might build:
+Here is **my list of potential models** that we might build:
  - Naïve Bayes
  - Logistic Regression
  - K-Nearest Neighbours
@@ -90,7 +90,7 @@ Here is *my list of potential models* that we might build:
  - Random Forest
  - Neural Network
 
-Please note that these models are sorted in order. My list starts with models that are the simplest, the fastest, the ones requiring the fewest number of parameters, the ones that are more interpretable and  give probabilistic predictions.
+Please note that these models are sorted in order. My list starts with models that are the simplest, the fastest, the ones requiring the fewest number of parameters, the ones that are more interpretable and at the same time giving probabilistic predictions.
 
 ### What metrics to optimize for
 
@@ -101,7 +101,7 @@ Precision and Recall for different thresholds. A high AUPRC represents both high
 
 Also, I would choose a model that is fast in delivering the results, meaning within a reasonably low amount of time, because we need to text the customer in case of fraudulent transactions. This is often called Prediction Speed.
 
-Maximizing both the Recall and the Prediction Speed involves solving a multi-objective optimization problem. In this type of problems, in general, there is no single optimal solution - we need to investigate the so-called "Pareto frontier" of different optimal values (Recall vs Prediction Speed).
+**Maximizing both the Recall and the Prediction Speed involves** solving a multi-objective optimization problem. In this type of problems, in general, there is no single optimal solution - we need to investigate the so-called "Pareto frontier" of different optimal values (Recall vs Prediction Speed).
 
 ## 5. State your hypothesis (and solution)
 
