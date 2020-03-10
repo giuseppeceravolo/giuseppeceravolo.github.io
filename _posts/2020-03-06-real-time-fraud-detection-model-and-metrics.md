@@ -22,7 +22,7 @@ What's your strategy? Here's mine, have fun! :)
 
 ## 1. Summarize the question
 
-I'm working in a Payment Service Provider company that aims at developing a model to detect fraudulent transactions on its platform
+I'm working in a Payment Service Provider company that aims at developing a model to detect fraudulent transactions on its platform.
 My task is, first, to suggest what model to build and, second, to point out the metrics to optimize such model for.
 Is that correct?
 
