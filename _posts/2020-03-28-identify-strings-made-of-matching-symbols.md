@@ -4,19 +4,17 @@ date: 2020-03-28
 tags: [python, learning, interview]
 header:
   image: "/images/identify-strings-made-of-matching-symbols.png"
-  excerpt: "Write a function to check whether a string of symbols is balanced or not, meaning if it is made of pairs of opening and closing parentheses."
+  excerpt: "Write a function to check whether a string of symbols is made of properly-nested pairs of opening and closing parentheses only."
 toc: true
 toc_label: "Case"
 toc_icon: "code"
 ---
 
-Let's build a function that mimics what happens in the text editor when the **linter** is checking for whether or not you remembered to close all of your opening symbols. This function checks for the parentheses to be balanced,
-each opening parenthesis should also have a closing parenthesis, and the parentheses must be properly nested.
+Let's build a function that mimics what happens in the text editor when the **linter** is checking for whether or not you remembered to close all of your opening symbols. This function basically checks for the parentheses to be balanced, each opening parenthesis should also have a closing parenthesis, and the parentheses must be properly nested.
 
 # Question
 
-Create a function that takes in a string of symbols as a parameter and return *True* if the symbol string
-is balanced or *False* if it is not.
+Create a function that takes in a string of symbols as a parameter and returns *True* if the symbol string is balanced or *False* if it is not.
 In particular, the string should only contain opening and closing parentheses.
 
 ## Examples
