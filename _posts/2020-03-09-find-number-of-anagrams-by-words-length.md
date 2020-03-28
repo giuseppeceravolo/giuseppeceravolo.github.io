@@ -23,7 +23,7 @@ Note: We expect to find very few anagrams for long words, whereas there are more
 
 ## Example of input and final output
 
-Here you can find and example of the input file, a list of words.
+Here you can find an example of the input file, a list of words.
 
 ~~~python
 ['abbasi',
