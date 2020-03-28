@@ -19,7 +19,7 @@ Create a function that takes in a string of symbols as a parameter and return *T
 is balanced or *False* if it is not.
 In particular, the string should only contain opening and closing parentheses.
 
-## Example of input and final output
+## Examples
 
 Here you can find and example of the input file, a list of words.
 
@@ -35,7 +35,7 @@ Here you can find and example of the input file, a list of words.
 | ({}][[)       | *False*   |
 | ([a])         | *False*   |
 
-Hint: make use of a stack in your solution!
+Hint: make use of a **stack** in your solution!
 
 # Lay out your structure
 
@@ -47,8 +47,8 @@ In other words, I aim at returning *False* as soon as I hit a mismatch or an inc
 Specifically, I am going to loop through each symbol of the input string and:
 1. in case it is an opening symbol, I push it onto the stack
 2. in case it is an ending symbol, I check if it matches the item at the top of the stack and:
-  1. if they are a matching pair of symbols, then I remove the top symbol of the stack and move to the next symbol of the input string
-  2. if they are not a matching pair of symbols, then I can immediately return *False*
+  - if they are a matching pair of symbols, then I remove the top symbol of the stack and move to the next symbol of the input string
+  - if they are not a matching pair of symbols, then I can immediately return *False*
 
 The above process continues until all symbols of the input string are check and the stack is empty.
 
@@ -56,7 +56,7 @@ Also, as a quick consistency check, I am going to verify that the length of the 
 
 As suggested by the hint, I am first going to implement a stack object.
 
-# Step 1: Implement a stack
+# Step 1: implement a stack
 
 Let's write down some code to implement a **stack**.
 
@@ -239,9 +239,6 @@ Input string to test: ([a])
 Expected result for string: False
 Actual result for string: False
 --------------------------------------------------
-
-Process finished with exit code 0
-
 ~~~
 
 # Conclusions
