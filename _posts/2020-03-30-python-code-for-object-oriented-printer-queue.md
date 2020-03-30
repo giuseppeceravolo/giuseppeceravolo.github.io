@@ -25,10 +25,10 @@ Write an object-oriented Python script to implement the 3 classes and mimic the 
 In particular, here are the name of the 3 classes:
  - **PrintJob** that:
     - has a *name* attribute that we can use to refer to it
-    - has a *pages* attribute (a random number from 1 to 10)
-    - has a *printed* attribute
+    - has a *pages* attribute that is a random number from 1 to 10
+    - has a *printed* attribute that is a boolean
     - has a *check_printed()* method that will check that both all of its pages have been printed and the Printer has labelled it (i.e. changed its status) as 'printed'
- - **PrintQueue** that follows the queue data structure implementation and has the following methods:
+ - **PrintQueue** that follows an implementation of the queue data structure and has the following methods:
     - *enqueue()* to add items in 0th index of the PrintQueue
     - *dequeue()* to remove the front-most item of the PrintQueue
     - *peek()* to return the front-most item of the queue (without removing it)
@@ -42,12 +42,13 @@ In particular, here are the name of the 3 classes:
     - *show_print_queue()* to show the length of the PrintQueue as well as the name, pages, and position of each PrintJob in it.
 
 Please note that, before adding the PrintJob to the PrintQueue, the Printer's *get_job()* method should check, in order:
-    1. if the argument provided is a PrintJob object
-    2. if the PrintJob is already 'printed'
-    3. if the PrintJob is already in the PrintQueue
+  1. if the argument provided is not a PrintJob object
+  2. if the PrintJob is already 'printed'
+  3. if the PrintJob is already in the PrintQueue
+
 and in case any of the above conditions is met it will need to raise a proper Exception.
 
-Also, note that, before trying to show or print any PrintJob in the PrintQueue, all other Printer's methods should check if the PrintQueue is empty.
+Also, note that, before trying to show or print any PrintJob in the PrintQueue, all Printer's methods should check if the PrintQueue is empty.
 In case the PrintQueue is empty, the methods will need to raise a proper Exception.
 
 Hint: make use of a **queue** in your solution!
@@ -157,6 +158,7 @@ class PrintQueue:
         Runs in linear time, O(n), because we need to check all items
         in the list representing the Queue.
         """
+
         return item in self.items
 ~~~
 
@@ -223,7 +225,7 @@ We can interactively run the code via the command line (the prompt) and test it 
 ~~~
 C:\Users\...>python -i printer_queue.py
 >>> printer = Printer() # we initialize a Printer object
->>> job1 = PrintJob("Job1")  # we initialize a PrintJob object called "Job1"
+>>> job1 = PrintJob("Job1") # we initialize a PrintJob object called "Job1"
 This PrintJob named Job1 has 3 pages.
 >>> job2 = PrintJob("Job2") # we initialize a PrintJob object called "Job2"
 This PrintJob named Job2 has 1 pages.
