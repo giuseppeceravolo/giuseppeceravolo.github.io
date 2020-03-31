@@ -16,7 +16,7 @@ As a reminder, a palindrome is a word that is spelled the same both forwards and
 
 # Question
 
-The task is write a function that takes in an input string and verifies whether or not it is a palindrome.
+The task is to write a function that takes in an input string and verifies whether or not it is a palindrome.
 Specifically, the function must return either *True* if the string is a palindrome or *False* if the string is not a palindrome.
 
 ## Examples
