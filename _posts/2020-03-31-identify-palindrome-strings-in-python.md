@@ -1,10 +1,10 @@
 ---
-title: "Identify palindrome strings in Python"
+title: "Identify palindromes in Python"
 date: 2020-03-31
 tags: [python, learning, interview]
 header:
-  image: "/images/identify-palindrome-strings-in-python.png"
-  excerpt: "Write a function to check whether a string is made a palindrome by means of a deque data structure."
+  image: "/images/identify-palindromes-in-python.png"
+  excerpt: "Write a function to check whether a string is a palindrome by means of a deque data structure."
 toc: true
 toc_label: "Case"
 toc_icon: "code"
