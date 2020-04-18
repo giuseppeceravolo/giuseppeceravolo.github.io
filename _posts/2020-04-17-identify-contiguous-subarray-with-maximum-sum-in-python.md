@@ -49,7 +49,7 @@ Hint: in looping through the input array's elements, make use of a **index** to 
 
 # Lay out your structure
 
-I am first going to implement the following approach:
+I am going to implement the following approach:
 
 1. start by initializing:
   * both the maximum sum (`global_max`) and the current sum (`current_max`) equal to the first element of the array
