@@ -24,7 +24,7 @@ Also, the requirement is for the function to have a **linear time complexity**.
 
 ## Examples
 
-Please refer to the table below as per some examples of input strings and the corresponding function outputs.
+Please refer to the table below as per some examples of input arrays and the corresponding expected function outputs.
 
 | input                       | output                      |
 |-----------------------------|-----------------------------|
