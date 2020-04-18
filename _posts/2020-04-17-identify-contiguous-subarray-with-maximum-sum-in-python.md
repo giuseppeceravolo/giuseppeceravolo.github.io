@@ -30,7 +30,7 @@ Please refer to the table below as per some examples of input arrays and the cor
 |-----------------------------|-----------------------------|
 | [-2, 5],                    | ([5], 5)                    |
 | [1, -3, 7, 0, -5, 9, -3],   | ([7, 0, -5, 9], 11)         |
-| [0, 0],                     | ([0], 0)                    |
+| [0],                        | ([0], 0)                    |
 | [-8, 0, 0, 0, 0, -2],       | ([0], 0)                    |
 | [8, 10, -6, -4, -7, 2],     |  ([8, 10], 18)              |
 | [-8, -4, -7, -2, 2, 7],     | ([2, 7], 9)                 |
@@ -54,7 +54,7 @@ I am going to implement the following approach:
 1. start by initializing:
   * both the maximum sum (`global_max`) and the current sum (`current_max`) equal to the first element of the array
   * the starting index (`start`), the ending index (`end`), and the index with which to track the start of the potential largest subarray (`index_potential_maximum_subarray_starts`) equal to 0
-2. loop through the input array, starting from the second element, and add perform the following checks:
+2. loop through the input array, starting from the second element, and perform the following checks:
   * if the current element is greater than the current sum plus the current element, then assign the current sum equal to the current element and store the current index for the start of the potential largest subarray; otherwise, update the current sum by adding the current element to it
   * if the resulting current sum is greater than the maximum sum recorded so far, then assign the maximum sum equal to the current sum and assign the start index equal to the index previously recorded as the starting index of the potential largest sum, and the end index equal to the current index
 
@@ -141,7 +141,7 @@ class TestLargestSubarray(unittest.TestCase):
     arrays = [
         [-2, 5],
         [1, -3, 7, 0, -5, 9, -3],
-        [0, 0],
+        [0],
         [-8, 0, 0, 0, 0, -2],
         [8, 10, -6, -4, -7, 2],
         [-8, -4, -7, -2, 2, 7],
