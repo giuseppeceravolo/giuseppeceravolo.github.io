@@ -22,7 +22,7 @@ The task is to write a function to **reverse a Doubly Linked List in-place and i
 
 To this purpose, we first need to implement a Doubly Linked List.
 
-## Examples
+## Example
 
 For example, suppose we have a Doubly Linked List made of the following Nodes: "4 -> 3 -> 2 -> 1".
 
