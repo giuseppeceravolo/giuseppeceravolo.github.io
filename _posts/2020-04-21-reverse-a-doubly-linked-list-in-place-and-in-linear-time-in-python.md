@@ -24,9 +24,11 @@ To this purpose, we first need to implement a Doubly Linked List.
 
 ## Example
 
-For example, suppose we have a Doubly Linked List made of the following Nodes: "4 -> 3 -> 2 -> 1".
+For example, suppose we have a Doubly Linked List made of the following Nodes:
+"4 -> 3 -> 2 -> 1".
 
-As a result of calling the reverse() method on the Doubly Linked List, it would look like the following: "1 -> 2 -> 3 -> 4".
+As a result of calling the reverse() method on the Doubly Linked List, it would look like the following:
+"1 -> 2 -> 3 -> 4".
 
 Hint: in looping through the Nodes make sure to keep track of the last Node so that you can re-assign the Doubly Linked List's Head to it!
 
