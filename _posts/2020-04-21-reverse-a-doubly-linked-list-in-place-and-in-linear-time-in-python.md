@@ -228,7 +228,7 @@ DLLNode object: Nodes=1 -> 2 -> 3 -> 4
 DLLNode object: Nodes=1 -> 2 -> 4
 ~~~
 
-Nicely done! All methods of the DLL class work as expected.
+All methods of the DLL class work as expected. Nicely done!
 
 # Conclusions
 
