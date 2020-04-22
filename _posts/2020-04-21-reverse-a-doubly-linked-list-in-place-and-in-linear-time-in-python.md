@@ -10,11 +10,11 @@ toc_label: "Case"
 toc_icon: "code"
 ---
 
-"Write me a function that performs an in-place reversal of a **Doubly Linked List**."
+"Write me a function that performs an in-place reversal of a **Doubly Linked List** in linear time."
 
 This is one of the most common interview questions you might face about the implementation of Abstract Data Types.
 
-I am going to assume that you are familiar with the underlying ideas of Doubly Linked Lists, otherwise I hope you will get a good understanding by reading my code! :)
+I am going to assume that you are familiar with the underlying ideas of Doubly Linked Lists, otherwise I hope you will get a good understanding of it by reading my code! :)
 
 # Question
 
@@ -25,9 +25,11 @@ To this purpose, we first need to implement a Doubly Linked List.
 ## Example
 
 For example, suppose we have a Doubly Linked List made of the following Nodes:
+
 "4 -> 3 -> 2 -> 1".
 
 As a result of calling the reverse() method on the Doubly Linked List, it would look like the following:
+
 "1 -> 2 -> 3 -> 4".
 
 Hint: in looping through the Nodes make sure to keep track of the last Node so that you can re-assign the Doubly Linked List's Head to it!
@@ -183,7 +185,8 @@ def reverse(self):
 
     while current is not None:
         previous = current.get_previous()
-        current.set_previous(current.get_next())
+        next = current.get_next()
+        current.set_previous(next)
         current.set_next(previous)
         current = current.get_previous()
 
@@ -192,9 +195,9 @@ def reverse(self):
 
 Of course, the above piece of code has to be included within the DLL class.
 
-Basically, I start by initializing three variables: `current`, `previous`, and `next`. The idea is to loop through all the Nodes by pointing at each of them via the `current` variable. At the same time, we swap the `current`'s previous and next Nodes with each other.
+Basically, I start by initializing three variables: `current`, `previous`, and `next`. The idea is to loop through all the Nodes by pointing at each of them via the `current` variable and, first of all, store their next and previous into `next` and `previous`, respectively. Then, we swap the `current`'s previous and next Nodes with each other.
 
-One important note. Once we get to the last Node of the Doubly Linked List, we assign its previous Node to the `previous` variable. Then, when the `current` variable becomes *None* (that is the next element of the last Node), we can re-assign the Head of the Doubly Linked List to take the `previous`' previous Node (that is the last Node of the Doubly Linked List).
+One important note. Once we get to the last Node of the Doubly Linked List, we assign its previous Node to the `previous` variable. Then, when the `current` variable becomes *None* (that is the now previous element of the last Node), we can re-assign the Head of the Doubly Linked List to take the `previous`' previous Node (that is the last Node of the Doubly Linked List).
 
 # Test the function
 
@@ -210,25 +213,37 @@ And now let's test the code.
 
 ~~~command
 >>> dll = DLL()
+>>> dll.is_empty()
+True
 >>> dll.add_front(1)
+>>> dll.is_empty()
+False
 >>> dll.add_front(2)
 >>> dll.add_front(3)
 >>> dll.add_front(4)
+>>> dll.search(2)
+True
 >>> dll.size
 4
 >>> dll.head
 DLLNode object: data=4
 >>> dll
 DLLNode object: Nodes=4 -> 3 -> 2 -> 1
->>> dll.reverse()
->>> dll
-DLLNode object: Nodes=1 -> 2 -> 3 -> 4
 >>> dll.remove(3)
+>>> dll
+DLLNode object: Nodes=4 -> 2 -> 1
+>>> dll.reverse()
 >>> dll
 DLLNode object: Nodes=1 -> 2 -> 4
 ~~~
 
 All methods of the DLL class work as expected. Nicely done!
+
+If you have doubts about how the while look works, I would suggest to run it from the command line and add a print statement like the following, so that at each current Node you get a clear picture of what Node each variable is pointing at.
+
+~~~python
+print("previous:{}, current:{}, next:{}".format(previous, current, next))
+~~~
 
 # Conclusions
 
