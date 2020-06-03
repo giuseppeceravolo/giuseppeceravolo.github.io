@@ -4,5 +4,5 @@ permalink: /tags/
 layout: tags
 author_profile: true
 header:
-  image: "/images/machine-learning-projects.jpg"
+  image: "/images/machine-learning-projects-1.jpg"
 ---
