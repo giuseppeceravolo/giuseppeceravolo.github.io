@@ -32,12 +32,8 @@ Here is the structure I am going to follow to solve this challenge:
 3. Find the five athletes who won gold medals in the most events
 
 # Step 1: load data
-```python
 
-medals = [medal(*line.strip().split('\t')) for line in open(directory_path+data_file_name,'r')]
-```
-
-We are playing with data about all the gold medals that were won at the Olympics in athletics.
+We are playing with data about all the gold medals that were won at the Olympics in athletics. You can download the data [from here](https://drive.google.com/file/d/1GHNAcAniCOiHvfOp0W24qLAxt9U5Mbpn/view?usp=sharing).
 
 Before we can parse it we should understand its structure: we can open it in reading mode, read all the lines, and display only the first 10.
 
