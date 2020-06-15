@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "Giuseppe Ceravolo"
-  avatar           : "/images/giuseppe-ceravolo-data-scientist.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/giuseppe-ceravolo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio - A collection of projects leading to a Data Scientist."
   location         : "Milan, Italy"
   email            : "giuseppeceravolo93@gmail.com"
@@ -126,7 +126,7 @@ author:
       # url: "https://facebook.com/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/giuseppe-ceravolo-data-scientist/"
+      url: "https://www.linkedin.com/in/giuseppe-ceravolo/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/giuseppeceravolo/"
