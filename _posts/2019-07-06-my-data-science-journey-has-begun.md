@@ -1,10 +1,10 @@
 ---
-title: "My Data Science Journey Has Begun!"
+title: "My Data Journey Has Begun!"
 date: 2019-07-06
-tags: [data science, learning]
+tags: [data, learning]
 header:
   image: "/images/machine-learning-projects.jpg"
-  excerpt: "What a wonderful moment it was when I decided to start this journey! Let me tell you about my passion for Data Science and why I started this website"
+  excerpt: "What a wonderful moment it was when I decided to start this journey! Let me tell you about my passion for Data and why I started this website"
 mathjax: "true"
 ---
 
@@ -14,13 +14,13 @@ I do not know yet.
 
 The only thing that I know for sure is that I am going to be proud for what I have accomplished.
 
-This portfolio - or perhaps blog - of mine will motivate me to study consistently the Data Science world.
+This portfolio - or perhaps blog - of mine will motivate me to study consistently the Data world.
 
 As I am an eager learner and I have a proclivity for Data Visualization and Data Modeling, I just can't wait how this will end up.
 
 ## *Why starting a blog?*
 
-There are three main reasons that led me to start this journey to Data Science literacy, namely:
+There are three main reasons that led me to start this journey to Data literacy, namely:
 
 1. keep learning
 2. collect my projects for reference
@@ -47,6 +47,6 @@ Also, the Data Scientist is capable of making predictions and drawing inferences
 
 I guess this job does feel as exciting to you as it does to me!
 
-Please enjoy reading about my journey and have fun with Data Science.
+Please enjoy reading about my journey and have fun with Data.
 
 ~Giuseppe
