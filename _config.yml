@@ -142,7 +142,7 @@ footer:
       # url:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-instagram"
-      url: "https://www.linkedin.com/in/giuseppe-ceravolo-data-scientist/"
+      url: "https://www.linkedin.com/in/giuseppe-ceravolo/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/giuseppeceravolo"
