@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "Giuseppe Ceravolo"
   avatar           : "/images/giuseppe-ceravolo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data Science Portfolio - A collection of projects leading to a Data Scientist."
+  bio              : "A collection of notes leading to a Data practicioner."
   location         : "Milan, Italy"
   email            : "giuseppeceravolo93@gmail.com"
   links:
