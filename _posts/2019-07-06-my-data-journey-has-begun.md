@@ -45,7 +45,15 @@ $$Data Science = Computer Science + Maths + Business Expertise$$
 
 Also, the Data Scientist is capable of making predictions and drawing inferences for future outcomes by asking the right questions, collecting and cleaning the data, and effectively visualize and communicate insights.
 
-I guess this job does feel as exciting to you as it does to me!
+## *What does a Data Engineer do?*
+
+At a high level, a *"Data Engineer"* helps companies make the most out of their data and enables data-driven decisions.
+
+This may sounds just like a Data Scientist job, though. To be more preicse, a Data Engineer is responsible for collecting, transforming, and publishing data. For example, while working behind the scenes, Data Engineers create the databases where all the company's data resides and they build pipelines that transform raw data into formats that are useful for Data Scientists.
+
+Also, Data Engineers create the infrastructure that automates model building for machine learning and analytics.
+
+I guess this kind of jobs does feel as exciting to you as it does to me!
 
 Please enjoy reading about my journey and have fun with Data.
 
